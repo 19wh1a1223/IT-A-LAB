@@ -1,0 +1,18 @@
+create table id(cus_id int primary key, cus_name varchar(20));
+insert into id values(1,'jess');
+insert into id values(2,'hanshi');
+insert into id values(3,'akansha');
+create table reservations(res_d int primary key,cus_id int ,day date ,foreign key(cus_id) references id (cus_id));
+insert into reservations values(001,1,'2021-06-01');
+insert into reservations values(002,2,'2021-06-02');
+insert into reservations values(003,3,'2021-06-03');
+select * from id;
+select * from reservations;
+SELECT cus_id from id WHERE cus_id = ANY(Select cus_id from reservations);
+SELECT cus_id from id WHERE cus_id IN (Select cus_id from reservations);
+SELECT cus_id from id WHERE cus_id = Some(Select cus_id from reservations);
+SELECT cus_id from id WHERE cus_id <> ALL(Select cus_id from reservations);
+select cus_id from id where cus_id < 3 union select cus_id from reservations where day='2021-06-03';
+select cus_id from id where cus_id < 5 union select cus_id from reservations where day='2021-06-01';
+select cus_id from id where cus_id < 3 or cus_id in (select cus_id from reservations where day='2021-06-03');
+select cus_id from id where cus_id < 3 and cus_id in (select cus_id from reservations where day='2021-06-03');
