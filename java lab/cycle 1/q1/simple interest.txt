@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Simpleinterest {
+	public static void main(String[] args) {
+		int p;
+		int t; 
+		float r;
+		double si;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the values");
+		System.out.print(System.lineSeparator());
+		System.out.print("Enter the principal amount p: ");
+		p = sc.nextInt();
+		System.out.print(System.lineSeparator());
+		System.out.print("Enter the time t: ");
+		t = sc.nextInt();
+		System.out.print(System.lineSeparator());
+		System.out.print("Enter the rate per annum r: ");
+		r = sc.nextFloat();
+		si = (p * t * r) / 100;
+		System.out.print(System.lineSeparator());
+		System.out.println("The Simple Interest is : "+si);
+	}
+}
