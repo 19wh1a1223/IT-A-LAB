@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Read {
+	public static void main(String args[]) {
+		int num1;
+		float num2;
+		System.out.print("Enter any Integer : ");
+		num1 = sc.nextInt();
+		num2 = sc.nextFloat();
+		System.out.print("The numbers are : "+num1+","+num2);
+		
+	}
+}
