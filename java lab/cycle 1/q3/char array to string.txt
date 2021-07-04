@@ -1,0 +1,7 @@
+class Chararraytostring {
+	public static void main(String args[]) {
+		char[] ch = {'j','e','s','s','i','c','a'};
+		String s = new String(ch);
+		System.out.println(s);
+	}
+}
