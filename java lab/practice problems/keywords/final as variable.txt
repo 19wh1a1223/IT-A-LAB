@@ -1,0 +1,10 @@
+class Person1 
+	final int age = 51; 
+	void show() {
+		age = 90;
+	}
+	public static void main(String args[]) {
+		Person1 per = new Person1();
+		per.show();
+	}
+}

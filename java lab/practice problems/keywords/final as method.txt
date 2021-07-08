@@ -1,0 +1,14 @@
+class Mom {
+	final void show() {  
+		System.out.println("crazy crazy");
+	}
+}
+class Person2 extends Mom {
+	void show() {
+		System.out.println("This is 2nd person");
+	}
+	public static void main(String args[]) {
+		Person2 p = new Person2();
+		p.show();
+	}
+}
