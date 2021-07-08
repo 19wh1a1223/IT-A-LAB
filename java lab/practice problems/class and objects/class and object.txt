@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Employee {
+	String name;
+	int id;
+	int salary;
+	void show() {
+		System.out.println();
+		System.out.println("Details Of Employee");
+		System.out.print(System.lineSeparator());
+		System.out.println("Name: "+name);
+		System.out.print(System.lineSeparator());
+		System.out.println("ID: "+id);
+		System.out.print(System.lineSeparator());
+		System.out.println("Salary: "+salary);
+    }
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Employee employee = new Employee();
+		System.out.print("Enter Employee Name : ");
+		System.out.print(System.lineSeparator());
+		employee.name = sc.nextLine();
+		System.out.print(System.lineSeparator());
+		System.out.print("Enter Employee ID: ");
+		System.out.print(System.lineSeparator());
+		employee.id = sc.nextInt();
+		System.out.print("Enter Employee Salary : ");
+		System.out.print(System.lineSeparator());
+		employee.salary = sc.nextInt();
+		employee.show();
+	}
+}
