@@ -1,0 +1,14 @@
+class Cycle {
+	void run() {
+		System.out.println("bottle bottle");
+	}
+}
+class Runtime extends Cycle {
+	void run() {
+		System.out.println("it is from milton");
+	}
+	public static void main(String args[]) {
+		Cycle c = new Runtime(); 
+		c.run();
+	}
+}
