@@ -1,0 +1,13 @@
+class Example {
+	public static void main(String[] args) {
+		String s1 = "this is a coding class";
+		int result;
+		result = s1.indexOf('d');
+		System.out.println(result);
+		result = s1.indexOf('a');
+		System.out.println(result);
+		result = s1.indexOf('s');
+		System.out.println(result);
+ 
+	}
+}
