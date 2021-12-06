@@ -1,0 +1,4 @@
+class Solution(object):
+    def addToArrayForm(self, num, k):
+        return (list(str(int("".join(map(str, num))) + k)))
+        
