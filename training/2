@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int getImportance(vector<Employee*> employees, int id) {
+        
+        map<int, Employee*> id_emp_map;
+        int total_importance = 0;
+
+        stack<Employee*> dfs_stack;
+        for(auto e : employees){
+             id_emp_map[e->id] = e;
+            } 
+        
+        dfs_stack.push(id_emp_map[id]);
+        
+        while(!dfs_stack.empty()){
+        Employee* curr = dfs_stack.top();
+            total_importance += curr->importance;
+            dfs_stack.pop();
+        for(auto sub : curr->subordinates){
+            dfs_stack.push(id_emp_map[sub]);
+        }
+      
+    }
+        
+        return total_importance;
+    }
+};
